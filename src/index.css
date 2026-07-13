@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Satoshi', 'Inter', sans-serif;
+  --animate-fade-in: fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-subtle: pulse-subtle 2s infinite ease-in-out;
+
+  /* Overriding violet with vibrant soft-turquoise/teal palette */
+  --color-violet-50: #f0fbf9;
+  --color-violet-100: #ccf5ee;
+  --color-violet-200: #99ebe0;
+  --color-violet-300: #5ce0cd;
+  --color-violet-400: #2bd4bd;
+  --color-violet-500: #14b8a6;
+  --color-violet-600: #0d9488;
+  --color-violet-700: #0f766e;
+  --color-violet-800: #115e59;
+  --color-violet-900: #134e4a;
+  --color-violet-950: #042f2e;
+
+  /* Overriding slate for premium off-white background and thin card borders */
+  --color-slate-50: #F3F5F8;
+  --color-slate-100: #EAEEF2;
+  --color-slate-200: #DEE3EB;
+
+  /* Additional custom palettes */
+  --color-ink-50: #ecf2f9;
+  --color-ink-100: #d9e6f2;
+  --color-ink-200: #b3cce6;
+  --color-ink-300: #8cb2d9;
+  --color-ink-400: #6699cc;
+  --color-ink-500: #407fbf;
+  --color-ink-600: #336699;
+  --color-ink-700: #264c73;
+  --color-ink-800: #19334d;
+  --color-ink-900: #0d1926;
+  --color-ink-950: #09121b;
+
+  --color-bluebell-50: #eaf4fa;
+  --color-bluebell-100: #d6e9f5;
+  --color-bluebell-200: #add2eb;
+  --color-bluebell-300: #84bce1;
+  --color-bluebell-400: #5ba5d7;
+  --color-bluebell-500: #328fcd;
+  --color-bluebell-600: #2872a4;
+  --color-bluebell-700: #1e567b;
+  --color-bluebell-800: #143952;
+  --color-bluebell-900: #0a1d29;
+  --color-bluebell-950: #07141d;
+
+  --color-icy-50: #e7f3fd;
+  --color-icy-100: #cfe7fc;
+  --color-icy-200: #9fcff9;
+  --color-icy-300: #6fb7f6;
+  --color-icy-400: #3f9ff3;
+  --color-icy-500: #0f87f0;
+  --color-icy-600: #0c6cc0;
+  --color-icy-700: #095190;
+  --color-icy-800: #063660;
+  --color-icy-900: #031b30;
+  --color-icy-950: #021322;
+
+  --color-grape-50: #f0eff5;
+  --color-grape-100: #e1e0eb;
+  --color-grape-200: #c3c0d8;
+  --color-grape-300: #a5a1c4;
+  --color-grape-400: #8782b0;
+  --color-grape-500: #69629d;
+  --color-grape-600: #544f7d;
+  --color-grape-700: #3f3b5e;
+  --color-grape-800: #2a273f;
+  --color-grape-900: #15141f;
+  --color-grape-950: #0f0e16;
+  
+  @keyframes fade-in {
+    from { opacity: 0; transform: scale(0.99) translateY(6px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; border-color: rgba(20, 184, 166, 0.6); box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.2); }
+    50% { opacity: 0.95; border-color: rgba(20, 184, 166, 0.8); box-shadow: 0 0 12px 2px rgba(20, 184, 166, 0.15); }
+  }
+}
