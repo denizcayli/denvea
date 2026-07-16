@@ -64,6 +64,14 @@ if (!isLocalhost) {
       db.forms = db.forms.filter(f => f.id !== id);
       saveDb(db);
       responseData = { success: true };
+    } else if (url.startsWith('/forms/') && method === 'GET') {
+      const id = url.split('/').pop();
+      const found = db.forms.find(f => f.id === id);
+      if (found) {
+        responseData = found;
+      } else {
+        status = 404;
+      }
     } else if (url === '/submissions' && method === 'POST') {
       const newSub = { ...data, id: data.id || String(Date.now()) };
       db.submissions.push(newSub);
