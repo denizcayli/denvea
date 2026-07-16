@@ -24,9 +24,10 @@ export default function DynamicFieldRenderer({ field, register, errors, watch, s
     case 'text':
     case 'number':
     case 'date':
+    case 'email':
       inputComponent = (
         <input
-          type={field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : 'text'}
+          type={field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : field.type === 'email' ? 'email' : 'text'}
           placeholder={field.placeholder || ''}
           {...register(field.id)}
           className={`w-full bg-slate-50 border border-slate-200 focus:border-[var(--brand-color)] px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[var(--brand-color-glow)] transition-all ${fieldShape}`}
